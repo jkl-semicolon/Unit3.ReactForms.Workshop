@@ -46,7 +46,7 @@ const SignUp = ({ourUsername, setUsername, ourPassword, setPassword, token, setT
         <input type="text" placeholder="username" onChange={changeUN}></input>
         <br/>
         <label>Enter Desired Password:</label>
-        <input type="text" placeholder="password" onChange={changePW}></input>
+        <input type="password" placeholder="password" onChange={changePW}></input>
         <br/>
         <button type='submit'>Submit</button>
       </form>
