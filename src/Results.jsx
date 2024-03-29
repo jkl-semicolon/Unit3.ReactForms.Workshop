@@ -6,6 +6,7 @@ const Results = ({token}) => {
       <h3>Here is your token:</h3>
       <br/>
       <p>{token}</p> 
+      <br/>
       <button>Press Here to Proceed</button>
     </>
   )

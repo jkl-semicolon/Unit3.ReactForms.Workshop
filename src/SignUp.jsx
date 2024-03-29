@@ -50,6 +50,7 @@ const SignUp = ({ourUsername, setUsername, ourPassword, setPassword, token, setT
         <br/>
         <button type='submit'>Submit</button>
       </form>
+      <br/>
       {outcome && <Results token={token}/>}
       {emptyInput && <Oops/>}
     </>

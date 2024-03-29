@@ -10,18 +10,27 @@ function App() {
   const [ourUsername, setUsername] = useState('')
   const [ourPassword, setPassword] = useState('')
   const [token, setToken] = useState('')
-  
+
   return (
     <>
-      <SignUp 
-        ourUsername={ourUsername} 
-        setUsername={setUsername} 
-        ourPassword={ourPassword} 
-        setPassword ={setPassword}
-        token={token}
-        setToken={setToken}
-      />
-      {/* <Authenticate/> */}
+      {
+        !token ? (
+          <SignUp 
+            ourUsername={ourUsername} 
+            setUsername={setUsername} 
+            ourPassword={ourPassword} 
+            setPassword ={setPassword}
+            token={token}
+            setToken={setToken}
+          /> ) : (
+          <Authenticate 
+            token={token} 
+            setToken={setToken}
+            setUsername={setUsername} 
+            setPassword ={setPassword}
+          />
+        )
+      }
     </>
   )
 }
