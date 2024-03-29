@@ -3,7 +3,7 @@ import Results from './Results.jsx'
 import Oops from './Oops.jsx'
 import { useState } from 'react'
 
-const SignUp = ({ourUsername, setUsername, ourPassword, setPassword, token, setToken}) => {
+const SignUp = ({ourUsername, setUsername, ourPassword, setPassword, token, setToken, setToWelcome}) => {
 
   const [outcome, setOutcome] = useState(false);
   const [emptyInput, setEmptyInput] = useState(false);
@@ -51,7 +51,7 @@ const SignUp = ({ourUsername, setUsername, ourPassword, setPassword, token, setT
         <button type='submit'>Submit</button>
       </form>
       <br/>
-      {outcome && <Results token={token}/>}
+      {outcome && <Results token={token} setToWelcome={setToWelcome}/>}
       {emptyInput && <Oops/>}
     </>
   )

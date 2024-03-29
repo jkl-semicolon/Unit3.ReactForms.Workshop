@@ -2,7 +2,7 @@ import { API_URL } from "./App"
 import { useState } from 'react'
 import AuthMsg from './AuthMsg.jsx'
 
-const Authenticate = ({token, setToken, setUsername, setPassword}) => {
+const Authenticate = ({token, setToken, setUsername, setPassword, setToWelcome}) => {
 
   const[authMessage, setAuthMessage] = useState('');
   const[authUsername, setAuthUsername] = useState('');
@@ -31,6 +31,7 @@ const Authenticate = ({token, setToken, setUsername, setPassword}) => {
     setUsername('')
     setPassword('')
     setToken('')
+    setToWelcome(false)
   }
 
   return (

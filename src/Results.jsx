@@ -1,4 +1,4 @@
-const Results = ({token}) => {
+const Results = ({token, setToWelcome}) => {
   return (
     <>
       <h2>Congratulations on creating an account!</h2>
@@ -7,7 +7,7 @@ const Results = ({token}) => {
       <br/>
       <p>{token}</p> 
       <br/>
-      <button>Press Here to Proceed</button>
+      <button onClick={() => {setToWelcome(true)}}>Press Here to Proceed</button>
     </>
   )
 }
